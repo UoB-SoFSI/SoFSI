@@ -108,7 +108,7 @@ Converts multiple `*.sef` binary files to `*.mat` format.
 The output is a batch of files named `filename.mat` each with a _struct_ variable containing the following:
 
 ```
-└── filename              # structure named as per input file
+└── output              # structure
     ├──sefFileInfo        # structure with info on original  *.sef input file from MATLAB's dir() function
     │   ├── name          # character array
     │   ├── folder        # character array
