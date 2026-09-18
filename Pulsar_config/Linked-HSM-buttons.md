@@ -19,3 +19,6 @@ Edit the following line as needed
 ```
 `1` = True (Buttons combined)\
 `0` = False (Separate buttons for each HSM)
+
+> [!WARNING]
+> Remember to rest the config  back to the default combined state, otherwise the system will fail to start up correctly when using the biaxial table.
