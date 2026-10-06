@@ -11,7 +11,7 @@ These functions are useful for converting time histories into `*.sef` format for
 <summary>sefwrite.m</summary>
 
 ### [sefwrite.m](sefwrite.m)
-Converts data from a `*.txt` or `*.csv` file into `*.sef` binary format. The input file should contain data in columns.
+Converts data to `*.sef` binary format. The data is drawn from the input variables specified below.
 
 The output is `filename.sef` in MATLAB's current working directory.
 
@@ -42,7 +42,7 @@ sefwrite(filename, loggingrate, names, scales, units, matrix, comments)
 
 ### [convert2sef.m](convert2sef.m)
 
-Converts data from multiple input files to `*.sef` for use as drive files in Pulsar's ICS. The function attempts to remove any header lines in the files before resampling the data to 512 Hz and adding a 3 second tail before and after.
+Converts data from multiple input files (`*.txt` or `*.csv`) to `*.sef` for use as drive files in Pulsar's ICS. The function attempts to remove any header lines in the files before resampling the data to 512 Hz and adding a 3 second tail before and after.
 
 The output is a batch of files named `filename_target.sef` in the same folder as the input files.
 
@@ -59,7 +59,7 @@ convert2sef('InputRate', 512, 'NumChannels', 3)
 ```
 If not provided, the function will default to 512 Hz for the input sample rate and 3 channels.
 
-A user interface will appear for selecting the input files.
+A user interface will appear for selecting the input files, and you will be prompted to enter the channel names and units in the command window.
 
 </details>
 
